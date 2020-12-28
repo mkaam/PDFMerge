@@ -1,0 +1,80 @@
+2020-12-15 15:08:08.7326|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:08:08.8446|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:08:12.4076|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:08:15.1056|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201214
+2020-12-15 15:14:41.7760|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:14:41.8390|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:14:44.8381|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:14:44.8611|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201214
+2020-12-15 15:15:09.3519|ERROR|AMPDFMerge.Program|System.NullReferenceException: Object reference not set to an instance of an object.
+   at AMPDFMerge.Program.MergeEncryptedPDFs(String outputFile, String outputPassword, String[] pdfs, String inputPassword) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 112
+   at AMPDFMerge.Program.RunOptions(Options opts) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 185
+2020-12-15 15:15:51.2635|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:15:51.3255|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:15:53.8079|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:15:53.8309|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:16:11.1713|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:16:11.2513|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:16:13.6853|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:16:13.7113|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:16:18.9804|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-15 15:20:45.6383|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:20:45.6783|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:20:48.3656|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:20:50.1972|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:24:31.6624|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:24:31.7344|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:24:33.8514|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:24:35.1984|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:28:52.8048|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:28:52.8668|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:28:53.4668|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:28:53.4958|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:30:20.2632|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:30:20.3592|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:30:20.6162|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:30:20.6452|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:50:33.1975|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:50:33.2575|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:50:33.2895|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:50:33.3255|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:50:38.2135|ERROR|AMPDFMerge.Program|PdfSharp.Pdf.IO.PdfReaderException: The specified password is invalid.
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, String password, PdfDocumentOpenMode openmode, PdfPasswordProvider passwordProvider)
+   at PdfSharp.Pdf.IO.PdfReader.Open(String path, String password, PdfDocumentOpenMode openmode, PdfPasswordProvider provider)
+   at PdfSharp.Pdf.IO.PdfReader.Open(String path, String password)
+   at AMPDFMerge.Program.MergeEncryptedPDFs(String outputFile, String outputPassword, String[] pdfs, String inputPassword) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 111
+   at AMPDFMerge.Program.RunOptions(Options opts) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 188
+2020-12-15 15:51:08.8891|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-15 15:51:09.0441|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_CBW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004)
+2020-12-15 15:51:09.2341|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-15 15:51:09.3011|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201215
+2020-12-15 15:51:21.3848|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-15 15:51:21.4068|INFO|AMPDFMerge.Program|targetDoc.AddPage(1)
+2020-12-15 15:51:21.4068|INFO|AMPDFMerge.Program|targetDoc.AddPage(2)
+2020-12-15 15:51:21.4118|INFO|AMPDFMerge.Program|targetDoc.AddPage(3)
+2020-12-15 15:51:24.7857|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-15 15:51:24.8008|INFO|AMPDFMerge.Program|targetDoc.AddPage(1)
+2020-12-15 15:51:24.8067|INFO|AMPDFMerge.Program|targetDoc.AddPage(2)
+2020-12-15 15:51:24.8067|INFO|AMPDFMerge.Program|targetDoc.AddPage(3)
+2020-12-15 15:51:24.8187|INFO|AMPDFMerge.Program|targetDoc.AddPage(4)
+2020-12-15 15:51:25.3087|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-15 15:51:25.3087|INFO|AMPDFMerge.Program|targetDoc.AddPage(1)
+2020-12-15 15:51:25.3188|INFO|AMPDFMerge.Program|targetDoc.AddPage(2)
+2020-12-15 15:51:25.3188|INFO|AMPDFMerge.Program|targetDoc.AddPage(3)
+2020-12-15 15:51:25.3188|INFO|AMPDFMerge.Program|targetDoc.AddPage(4)
+2020-12-15 15:51:25.8237|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-15 15:51:25.8237|INFO|AMPDFMerge.Program|targetDoc.AddPage(1)
+2020-12-15 15:51:25.8337|INFO|AMPDFMerge.Program|targetDoc.AddPage(2)
+2020-12-15 15:51:25.8337|INFO|AMPDFMerge.Program|targetDoc.AddPage(3)
+2020-12-15 15:51:25.8547|INFO|AMPDFMerge.Program|targetDoc.AddPage(4)
+2020-12-15 15:51:26.3917|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-15 15:51:26.3997|INFO|AMPDFMerge.Program|targetDoc.AddPage(1)
+2020-12-15 15:51:26.3997|INFO|AMPDFMerge.Program|targetDoc.AddPage(2)
+2020-12-15 15:51:26.4157|INFO|AMPDFMerge.Program|targetDoc.AddPage(3)
+2020-12-15 15:51:26.4157|INFO|AMPDFMerge.Program|targetDoc.AddPage(4)
+2020-12-15 15:51:26.7087|ERROR|AMPDFMerge.Program|PdfSharp.Pdf.IO.PdfReaderException: The specified password is invalid.
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, String password, PdfDocumentOpenMode openmode, PdfPasswordProvider passwordProvider)
+   at PdfSharp.Pdf.IO.PdfReader.Open(String path, String password, PdfDocumentOpenMode openmode, PdfPasswordProvider provider)
+   at PdfSharp.Pdf.IO.PdfReader.Open(String path, String password)
+   at AMPDFMerge.Program.MergeEncryptedPDFs(String outputFile, String outputPassword, String[] pdfs, String inputPassword) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 111
+   at AMPDFMerge.Program.RunOptions(Options opts) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 188

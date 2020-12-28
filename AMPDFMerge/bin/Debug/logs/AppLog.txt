@@ -1,0 +1,5 @@
+2020-12-13 14:36:57.9068|INFO|AMPDFMerge.Program|| --------- |
+2020-12-13 14:36:58.0058|INFO|AMPDFMerge.Program|| Test Mode |
+2020-12-13 14:36:58.0338|INFO|AMPDFMerge.Program|| _________ |
+2020-12-13 14:36:58.0338|INFO|AMPDFMerge.Program|SourceDir = C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\bin\Debug\pdfsample\normal
+2020-12-13 14:36:58.0648|INFO|AMPDFMerge.Program|OutputFile = C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\bin\Debug\pdfsample\pdfnormal.pdf

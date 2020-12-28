@@ -1,0 +1,51 @@
+2020-12-14 20:12:21.7678|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:12:21.8218|INFO|AMPDFMerge.Program|opts.InputFile is not null
+2020-12-14 20:12:21.8428|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-14 20:12:21.8638|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 
+2020-12-14 20:12:21.8668|INFO|AMPDFMerge.Program|targetDoc.Save(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Territory\2020-12-14-20-06-DN-TAMW001.pdf)
+2020-12-14 20:12:22.7588|ERROR|AMPDFMerge.Program|PdfSharp.PdfSharpException: At least a user or an owner password is required to encrypt the document.
+   at PdfSharp.Pdf.PdfDocument.Save(Stream stream, Boolean closeStream)
+   at PdfSharp.Pdf.PdfDocument.Save(String path)
+   at AMPDFMerge.Program.MergeEncryptedPDFs(String outputFile, String outputPassword, String[] pdfs, String inputPassword) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 121
+   at AMPDFMerge.Program.RunOptions(Options opts) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 184
+2020-12-14 20:12:53.5267|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:12:55.1885|INFO|AMPDFMerge.Program|opts.InputFile is not null
+2020-12-14 20:14:18.3600|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:14:44.2547|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:15:06.9199|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:15:06.9699|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail\2020-12-14-20-06-DN-TAMW001\)
+2020-12-14 20:15:17.0022|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-14 20:15:58.7433|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:15:58.8133|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail\2020-12-14-20-06-DN-TAMW001\)
+2020-12-14 20:16:01.8497|INFO|AMPDFMerge.Program|Merge Normal PDF
+2020-12-14 20:16:01.8737|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 
+2020-12-14 20:16:02.8708|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-14 20:16:03.6265|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-14 20:16:03.6265|INFO|AMPDFMerge.Program|targetDoc.Save(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Territory\2020-12-14-20-06-DN-TAMW001.pdf)
+2020-12-14 20:16:03.8685|ERROR|AMPDFMerge.Program|PdfSharp.PdfSharpException: At least a user or an owner password is required to encrypt the document.
+   at PdfSharp.Pdf.PdfDocument.Save(Stream stream, Boolean closeStream)
+   at PdfSharp.Pdf.PdfDocument.Save(String path)
+   at AMPDFMerge.Program.MergePDFs(String outputFile, String outputPassword, String[] pdfs) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 82
+   at AMPDFMerge.Program.RunOptions(Options opts) in C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\Program.cs:line 196
+2020-12-14 20:16:31.9485|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:16:31.9995|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail\2020-12-14-20-06-DN-TAMW001\)
+2020-12-14 20:16:34.1597|INFO|AMPDFMerge.Program|Merge Normal PDF
+2020-12-14 20:17:13.8911|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:17:13.9821|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail\2020-12-14-20-06-DN-TAMW001\)
+2020-12-14 20:17:16.2023|INFO|AMPDFMerge.Program|Merge Normal PDF
+2020-12-14 20:17:26.3144|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-14 20:17:32.4790|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-14 20:17:36.0291|INFO|AMPDFMerge.Program|targetDoc.Save(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Territory\2020-12-14-20-06-DN-TAMW001.pdf)
+2020-12-14 20:19:02.4460|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2020-12-14 20:19:02.4910|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-20-06-DN-TAMW001\)
+2020-12-14 20:19:05.2782|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2020-12-14 20:19:07.9459|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 201214
+2020-12-14 20:19:12.5653|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-14 20:19:12.5783|INFO|AMPDFMerge.Program|targetDoc.AddPage(1)
+2020-12-14 20:19:12.5783|INFO|AMPDFMerge.Program|targetDoc.AddPage(2)
+2020-12-14 20:19:12.5783|INFO|AMPDFMerge.Program|targetDoc.AddPage(3)
+2020-12-14 20:19:12.9387|INFO|AMPDFMerge.Program|targetDoc.AddPage(0)
+2020-12-14 20:19:12.9387|INFO|AMPDFMerge.Program|targetDoc.AddPage(1)
+2020-12-14 20:19:12.9387|INFO|AMPDFMerge.Program|targetDoc.AddPage(2)
+2020-12-14 20:19:12.9387|INFO|AMPDFMerge.Program|targetDoc.AddPage(3)
+2020-12-14 20:19:12.9537|INFO|AMPDFMerge.Program|targetDoc.Save(\\hmsismsAMWprd.id.pmi\ftp_AMW_prd$\3.PRD\Import\PDF\DN\ORDER\Territory3inch\DN-201214-TAMW001-2006.pdf)
