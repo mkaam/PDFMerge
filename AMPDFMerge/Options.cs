@@ -16,8 +16,8 @@ namespace AMPDFMerge
         [Option('i', "inputfile", Required = false, HelpText = "pdf file to be merged, ex: file.pdf file2.pdf file3.pdf ...")]
         public IEnumerable<string> InputFile { get; set; }
 
-        [Option('p', "inputpassword", Required = false, HelpText = "input pdf password (must be set if input pdf file encrypted)")]
-        public string InputPassword { get; set; }
+        [Option('p', "inputpassword", Required = false, HelpText = "input pdf password combination (must be set if input pdf file encrypted), can be define multiple. ex : Passwowd1 Password2")]
+        public IEnumerable<string> InputPassword { get; set; }
 
         [Option('o', "outputfile", Required = true, HelpText = "pdf file to be merged with (full path), ex: E:\\PDFMerge\\output.pdf")]
         public string OutputFile { get; set; }

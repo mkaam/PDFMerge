@@ -1,0 +1,14 @@
+2021-01-21 20:00:37.9585|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2021-01-21 20:00:38.0145|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsDPWprd.id.pmi\ftp_DPW_prd$\3.PRD\Import\PDF_ForTA\Invoice\TADetail3Inch\2021-01-21-07-00-INV-TADPW001 - ADI)
+2021-01-21 20:00:55.6975|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2021-01-21 20:00:58.7263|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 210121
+2021-01-21 20:01:31.3927|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2021-01-21 20:01:31.4437|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsDPWprd.id.pmi\ftp_DPW_prd$\3.PRD\Import\PDF_ForTA\Invoice\TADetail3Inch\2021-01-21-07-00-INV-TADPW001 - ADI)
+2021-01-21 20:01:41.1005|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2021-01-21 20:01:41.1165|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 210121
+2021-01-21 20:02:09.1367|INFO|AMPDFMerge.Program|LoggerConfigure(opts) successed!
+2021-01-21 20:02:09.1717|INFO|AMPDFMerge.Program|Directory.GetFiles(\\hmsismsDPWprd.id.pmi\ftp_DPW_prd$\3.PRD\Import\PDF_ForTA\Invoice\TADetail3Inch\2021-01-21-07-00-INV-TADPW001 - ADI)
+2021-01-21 20:02:11.5357|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2021-01-21 20:02:11.5487|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 210121
+2021-01-21 20:02:23.8020|INFO|AMPDFMerge.Program|Merge Encrypted PDF
+2021-01-21 20:02:23.8020|INFO|AMPDFMerge.Program|targetDoc.SecuritySettings.UserPassword = 210121

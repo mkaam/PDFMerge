@@ -14,3 +14,19 @@ C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AM
 C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.csproj.CopyComplete
 C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.exe
 C:\Users\mamrulla\OneDrive - Philip Morris International\#aam\App\PDF Phase 2\AMPDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.pdb
+C:\BitBucket\PDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.exe
+C:\BitBucket\PDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.pdb
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\AMPDFMerge.exe.config
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\AMPDFMerge.exe
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\AMPDFMerge.pdb
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\CommandLine.dll
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\NLog.dll
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\PdfSharp.Charting.dll
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\PdfSharp.dll
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\CommandLine.xml
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\NLog.xml
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\PdfSharp.xml
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\PdfSharp.Charting.xml
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\de\PdfSharp.resources.dll
+C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\de\PdfSharp.Charting.resources.dll
+C:\BitBucket\PDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.csproj.CopyComplete

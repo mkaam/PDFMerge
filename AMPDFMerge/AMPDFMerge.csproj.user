@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-d \\hmsismsAMWprd.id.pmi\ftp_CBW_prd%24\3.PRD\Import\PDF\DN\ORDER\Detail3inch\2020-12-14-23-58-DN-TCBW004 -o \\hmsismsAMWprd.id.pmi\ftp_CBW_prd%24\3.PRD\Import\PDF\DN\ORDER\Territory3inch\DN-201215-TCBW004-2358.pdf -p 201215 -q 201215</StartArguments>
+    <StartArguments>--inputdir "\\hmsismsDPWprd.id.pmi\ftp_DPW_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TADetail3Inch\2021-01-21-07-00-INV-TADPW001 - ADI" --outputfile "\\hmsismsDPWprd.id.pmi\ftp_DPW_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TA3Inch\INV-210121-TADPW001 - ADI-0700.pdf" --outputpassword 210121 --inputpassword 210120 210121</StartArguments>
   </PropertyGroup>
 </Project>

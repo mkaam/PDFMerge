@@ -94,7 +94,7 @@ namespace AMPDFMerge
         {
             Logger.Info("Merge Encrypted PDF");
 
-            pwd = inputPassword;
+            
             using (PdfDocument targetDoc = new PdfDocument())
             {
                 if (outputPassword != null)
@@ -110,6 +110,7 @@ namespace AMPDFMerge
                     PdfDocument pdfDoc;
                     // checking valid password, throw error if invalid
                     pdfDoc = PdfReader.Open(pdf, inputPassword);
+                    pwd = inputPassword;
 
                     pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import, PasswordProvider);
 
@@ -140,7 +141,7 @@ namespace AMPDFMerge
             string[] pdfs = Directory.GetFiles(opts.InputDir, "*.pdf");
 
             
-            MergeEncryptedPDFs(opts.OutputFile , opts.OutputPassword, pdfs, opts.InputPassword);
+            MergeEncryptedPDFs(opts.OutputFile , opts.OutputPassword, pdfs, "aaa");
         }
 
         static int RunOptions(Options opts)
@@ -182,17 +183,39 @@ namespace AMPDFMerge
             }
             else
             {
-                if (opts.InputPassword != null)
-                {
-                    try
+                if (opts.InputPassword.Count() > 0)
+                {       
+                    var passpdfs = opts.InputPassword.Cast<string>().ToArray();
+                    foreach (var passpdf in passpdfs)
                     {
-                        MergeEncryptedPDFs(opts.OutputFile, opts.OutputPassword, pdfs, opts.InputPassword);
+                        try
+                        {
+                            MergeEncryptedPDFs(opts.OutputFile, opts.OutputPassword, pdfs, passpdf);
+                        }
+                        catch (PdfReaderException pdfex)
+                        {
+                            if (!pdfex.Message.Contains("The specified password is invalid")) {
+                                Logger.Error(pdfex);
+                                exitCode = -2;
+                            }
+                        }
+                        catch(Exception ex)
+                        {
+                            Logger.Error(ex);
+                            exitCode = -2;
+                        }
+                        
                     }
-                    catch (Exception ex)
-                    {
-                        Logger.Error(ex);
-                        exitCode = -2;
-                    }
+                    
+                    //try
+                    //{
+                    //    MergeEncryptedPDFs(opts.OutputFile, opts.OutputPassword, pdfs, opts.InputPassword);
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    Logger.Error(ex);
+                    //    exitCode = -2;
+                    //}
                 }
                 else
                 {
