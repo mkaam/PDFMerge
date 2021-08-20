@@ -30,3 +30,4 @@ C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\PdfSharp.Charting.xml
 C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\de\PdfSharp.resources.dll
 C:\BitBucket\PDFMerge\AMPDFMerge\bin\Release\de\PdfSharp.Charting.resources.dll
 C:\BitBucket\PDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.csproj.CopyComplete
+C:\BitBucket\PDFMerge\AMPDFMerge\obj\Release\AMPDFMerge.csprojAssemblyReference.cache

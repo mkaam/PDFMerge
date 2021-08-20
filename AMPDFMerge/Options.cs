@@ -31,5 +31,11 @@ namespace AMPDFMerge
         [Option(HelpText = "Print process output to console")]
         public bool Verbose { get; set; }
 
+        [Option('k', "logname", Required = false, HelpText = "define log file name, ex: MyLog")]
+        public string LogName { get; set; }
+
+        [Option('l', "logfile", Required = false, HelpText = "define log file name with full path, ex: E:\\Log.csv")]
+        public string LogFile { get; set; }
+
     }
 }

@@ -4,6 +4,9 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>--inputdir "\\hmsismsDPWprd.id.pmi\ftp_DPW_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TADetail3Inch\2021-01-21-07-00-INV-TADPW001 - ADI" --outputfile "\\hmsismsDPWprd.id.pmi\ftp_DPW_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TA3Inch\INV-210121-TADPW001 - ADI-0700.pdf" --outputpassword 210121 --inputpassword 210120 210121</StartArguments>
+    <StartArguments>--inputdir "\\hmsismsDPWprd.id.pmi\ftp_DPW_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TADetail3Inch\2021-01-21-22-00-INV-TADPW001 - ADI" --outputfile "\\hmsismsDPWprd.id.pmi\ftp_DPW_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TA3Inch\INV-210121-TADPW001 - ADI-2100.pdf" --outputpassword 210121 --inputpassword 210121 210122</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <StartArguments>-l E:\SSISFiles\PDFForTA\Logs\PDFMergeA4.csv -d \\hmsismsKRAprd.id.pmi\ftp_KRA_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TADetail\2021-08-20-11-04-INV-AKRA001-Shipper -o "\\hmsismsKRAprd.id.pmi\ftp_KRA_prd%24\3.PRD\Import\PDF_ForTA\Invoice\TA\2021-08-20-11-04-INV-AKRA001-Shipper.pdf"</StartArguments>
   </PropertyGroup>
 </Project>

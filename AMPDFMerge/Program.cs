@@ -38,7 +38,11 @@ namespace AMPDFMerge
             var config = new NLog.Config.LoggingConfiguration();
 
             // Targets where to log to: File and Console
-            var logfile = new NLog.Targets.FileTarget("logfile") { FileName = AppPath + "\\logs\\AMPDFMerge-"+ DateTime.Now.ToString("yyyyMMdd") + ".log" };
+            var logfile = new NLog.Targets.FileTarget("logfile") { FileName = $"{AppPath}\\logs\\{(opts.LogName == null ? "PDFMerge": opts.LogName)}-{DateTime.Now.ToString("yyyyMMdd")}.log" };
+            if (opts.LogFile != "" && opts.LogFile != null)
+            {
+                logfile = new NLog.Targets.FileTarget("logfile") { FileName = opts.LogFile };
+            }
             logfile.MaxArchiveFiles = 30;
             logfile.ArchiveAboveSize = 1024000;
 
@@ -55,31 +59,40 @@ namespace AMPDFMerge
 
         public static void MergePDFs(string outputFile, string outputPassword, string[] pdfs)
         {
-            Logger.Info("Merge Normal PDF");
+            Logger.Info("Merge Normal PDF Start...");
             using (PdfDocument targetDoc = new PdfDocument())
             {
                 if (outputPassword != null)
                 {
-                    Logger.Info("targetDoc.SecuritySettings.UserPassword = " + outputPassword);
+                    Logger.Info("Set OwnerPassword : {0}", outputPassword);
                     targetDoc.SecuritySettings.OwnerPassword = outputPassword;
+                    Logger.Info("Set UserPassword : {0}", outputPassword);
                     targetDoc.SecuritySettings.UserPassword = outputPassword;
                 }
 
                 foreach (string pdf in pdfs)
                 {
-                    using (PdfDocument pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import))
+                    try
                     {
-                        bool hasOwnerAccess = pdfDoc.SecuritySettings.HasOwnerPermissions;
-                        for (int i = 0; i < pdfDoc.PageCount; i++)
+                        using (PdfDocument pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import))
                         {
-                            Logger.Info("targetDoc.AddPage(" + i.ToString() + ")");
-                            targetDoc.AddPage(pdfDoc.Pages[i]);
+                            bool hasOwnerAccess = pdfDoc.SecuritySettings.HasOwnerPermissions;
+                            for (int i = 0; i < pdfDoc.PageCount; i++)
+                            {
+                                Logger.Info("Add PDF : {0}", pdf);
+                                targetDoc.AddPage(pdfDoc.Pages[i]);
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        Logger.Error(ex, "MergePDFs");
+                    }
+
                 }
-                PdfDocumentSecurityLevel level = targetDoc.SecuritySettings.DocumentSecurityLevel;
-                Logger.Info("targetDoc.Save(" + outputFile + ")");
+                PdfDocumentSecurityLevel level = targetDoc.SecuritySettings.DocumentSecurityLevel;                
                 targetDoc.Save(outputFile);
+                Logger.Info("Merge Normal PDF success!, Save to : {0}", outputFile);
             }
         }
 
@@ -90,41 +103,58 @@ namespace AMPDFMerge
         }
 
 
-        public static void MergeEncryptedPDFs(string outputFile, string outputPassword, string[] pdfs, string inputPassword)
+        public static void MergeEncryptedPDFs(string outputFile, string outputPassword, string[] pdfs, IEnumerable<string> inputPassword)
         {
-            Logger.Info("Merge Encrypted PDF");
-
-            
+            Logger.Info("Merge Encrypted PDF Starting...");
+            var passpdfs = inputPassword.Cast<string>().ToArray();
             using (PdfDocument targetDoc = new PdfDocument())
             {
                 if (outputPassword != null)
                 {
-                    Logger.Info("targetDoc.SecuritySettings.UserPassword = " + outputPassword);
+                    Logger.Info("Set OwnerPassword = " + outputPassword);
                     targetDoc.SecuritySettings.OwnerPassword = outputPassword;
+                    Logger.Info("Set UserPassword = " + outputPassword);
                     targetDoc.SecuritySettings.UserPassword = outputPassword;
                 }
 
                 foreach (string pdf in pdfs)
                 {
-                  
+                    Logger.Info("Adding PDF : {0} ...", pdf);
                     PdfDocument pdfDoc;
-                    // checking valid password, throw error if invalid
-                    pdfDoc = PdfReader.Open(pdf, inputPassword);
-                    pwd = inputPassword;
-
-                    pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import, PasswordProvider);
-
-                    bool hasOwnerAccess = pdfDoc.SecuritySettings.HasOwnerPermissions;
-                    for (int i = 0; i < pdfDoc.PageCount; i++)
+                    foreach (string mypass in inputPassword)
                     {
-                        Logger.Info("targetDoc.AddPage(" + i.ToString() + ")");
-                        targetDoc.AddPage(pdfDoc.Pages[i]);
-                    }                                    
-                }
 
+                        try
+                        {
+                            Logger.Info("Trying unlock PDF {0} using password : {1}", pdf, mypass);
+                            pdfDoc = PdfReader.Open(pdf, mypass);
+                            pwd = mypass;
+                            Logger.Info("PDF {0} unlocked with password : {1}", pdf, mypass);
+
+                            pdfDoc = PdfReader.Open(pdf, PdfDocumentOpenMode.Import, PasswordProvider);
+
+                            bool hasOwnerAccess = pdfDoc.SecuritySettings.HasOwnerPermissions;
+                            for (int i = 0; i < pdfDoc.PageCount; i++)
+                            {                                
+                                targetDoc.AddPage(pdfDoc.Pages[i]);
+                            }
+                            break;
+                        }
+                        catch (PdfReaderException pdfex) {                            
+                            if (!pdfex.Message.Contains("The specified password is invalid"))
+                                Logger.Error(pdfex);                                                            
+                            else
+                                Logger.Error("Invalid password : {0}", mypass);
+                        }
+                    }
+                    // checking valid password, throw error if invalid  
+                    Logger.Info("PDF : {0} successfully added", pdf);
+
+                }
+               
                 PdfDocumentSecurityLevel level = targetDoc.SecuritySettings.DocumentSecurityLevel;
-                Logger.Info("targetDoc.Save(" + outputFile + ")");
                 targetDoc.Save(outputFile);
+                Logger.Info("Merge Encrypted PDF success!, Save to : {0}", outputFile);
             }
         }
 
@@ -141,7 +171,7 @@ namespace AMPDFMerge
             string[] pdfs = Directory.GetFiles(opts.InputDir, "*.pdf");
 
             
-            MergeEncryptedPDFs(opts.OutputFile , opts.OutputPassword, pdfs, "aaa");
+            //MergeEncryptedPDFs(opts.OutputFile , opts.OutputPassword, pdfs, "aaa");
         }
 
         static int RunOptions(Options opts)
@@ -149,11 +179,11 @@ namespace AMPDFMerge
             var exitCode = 0;
             string[] pdfs;
             LoggerConfigure(opts);
-            Logger.Info("LoggerConfigure(opts) successed!");
+            Logger.Debug("LoggerConfigure(opts) successed!");
 
             if (opts.InputFile.Count() > 0)
             {
-                Logger.Info("opts.InputFile is not null");
+                Logger.Debug("opts.InputFile is not null");
                 pdfs = opts.InputFile.Cast<string>().ToArray();
 
                 if (opts.InputDir != "")
@@ -173,7 +203,7 @@ namespace AMPDFMerge
             }
             else
             {
-                Logger.Info("Directory.GetFiles("+ opts.InputDir + ")");
+                Logger.Info("GetFiles PDF file from Directory : {0}", opts.InputDir);
                 pdfs = Directory.GetFiles(opts.InputDir, "*.pdf");
             }
 
@@ -184,28 +214,32 @@ namespace AMPDFMerge
             else
             {
                 if (opts.InputPassword.Count() > 0)
-                {       
-                    var passpdfs = opts.InputPassword.Cast<string>().ToArray();
-                    foreach (var passpdf in passpdfs)
-                    {
-                        try
-                        {
-                            MergeEncryptedPDFs(opts.OutputFile, opts.OutputPassword, pdfs, passpdf);
-                        }
-                        catch (PdfReaderException pdfex)
-                        {
-                            if (!pdfex.Message.Contains("The specified password is invalid")) {
-                                Logger.Error(pdfex);
-                                exitCode = -2;
-                            }
-                        }
-                        catch(Exception ex)
-                        {
-                            Logger.Error(ex);
-                            exitCode = -2;
-                        }
+                {
+                    //var passpdfs = opts.InputPassword.Cast<string>().ToArray();
+                    MergeEncryptedPDFs(opts.OutputFile, opts.OutputPassword, pdfs, opts.InputPassword);
+                    
+
+                    //foreach (var passpdf in passpdfs)
+                    //{
+                    //    try
+                    //    {
+                    //        MergeEncryptedPDFs(opts.OutputFile, opts.OutputPassword, pdfs, passpdf);
+                    //    }
+                    //    catch (PdfReaderException pdfex)
+                    //    {
+                    //        Logger.Error("Invalid password : {0}", passpdf);
+                    //        if (!pdfex.Message.Contains("The specified password is invalid")) {
+                    //            Logger.Error(pdfex);
+                    //            exitCode = -2;
+                    //        }
+                    //    }
+                    //    catch(Exception ex)
+                    //    {
+                    //        Logger.Error(ex);
+                    //        exitCode = -2;
+                    //    }
                         
-                    }
+                    //}
                     
                     //try
                     //{
